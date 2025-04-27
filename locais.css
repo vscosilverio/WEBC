@@ -1,0 +1,231 @@
+*{
+  margin: 0;
+  padding: 0;
+  font-family: "Josefin Slab", serif;
+}
+
+.fundo {
+  position: relative;
+  align-items: end;
+  padding: 40px;
+  display: flex;
+  flex-direction: column;
+  
+}
+
+.logo{
+  width: 20px;
+  height: 20px;
+  position: absolute;
+  left: 30px;
+  top: 20px;
+  padding: 10px;
+  z-index: 5;
+}
+
+.locaisHeader .logo a {
+  display: flex;
+  font-size: 30px;
+  text-align: left;
+  color: rgb(177, 176, 176);
+  position: relative;
+  margin-right: 1550px;
+}
+
+.nav-bar{
+  text-align: right;
+}
+
+.nav-bar, a {
+  justify-content: space-around;
+  text-decoration: none;
+  font-size: 25px;
+  font-weight: bold;
+  color: rgb(255, 255, 255);
+  text-align: right;
+  padding-right: 90px;
+  
+}
+
+.locaisHeader img {
+  width: 100%;
+  height: auto;
+  position: absolute;
+  top: 0px;
+  left: 0;
+  z-index: -1;
+}
+
+/* Locais */
+
+#escolhaLocal{
+    background-color: rgb(217,217,217);
+    padding: 50px ;
+    display: flex;
+    justify-content: center;
+    position: absolute;
+    background: transparent;
+    margin-top: 80px;
+    margin-left: 50px;
+  }
+  
+  .selecaoLocal{
+    text-align: center;
+    background: rgb(217,217,217);
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0 0 15px rgba(0,0,0,0.1);
+    width: 300px;
+  }
+  
+  .selecaoLocal h2 {
+    margin-bottom: 10px;
+    font-size: 24px;
+  }
+  
+  .selecaoLocal select, .selecaoLocal button {
+    width: 100%;
+    margin-bottom: 50px;
+    padding: 15px;
+    font-size: 16px;
+    border-radius: 10px;
+    border: 1px solid #ccc;
+  }
+  
+  .selecaoLocal button {
+    background-color: rgb(104,105,49);
+    color: white;
+    border: none;
+    cursor: pointer;
+  }
+  
+  .selecaoLocal button:hover {
+    background-color: rgb(126, 128, 47);
+  }
+
+
+/* **************** Modal  ****************** */
+
+.hidden {
+  display: none;
+}
+
+#localizacao {
+  position: absolute;
+  top: 10px;
+  right: -580px;
+  background: #f9f9f9;
+  width: 330px;
+  background: transparent;
+  z-index: 10;
+}
+
+.map-container {
+  width: 100%;
+  height: 200px;
+  overflow: hidden;
+  border-radius: 10px;
+  margin-top: 15px;
+  background: transparent;
+  padding: 40px 0;
+}
+
+.map-container iframe {
+  width: 100%;
+  height: 100%;
+  border: 0;
+  border-radius: 10px;
+}
+
+.PortoDetalhe{
+  padding: 20px;
+  border: 80px;
+  border-radius: 20px;
+  background-color: rgba(0, 0, 0, 0.6);
+  color: white;
+  
+}
+
+/* -------------------Media ----------------------- */
+
+@media (max-width: 768px) {
+
+  /* HEADER */
+  .locaisHeader .fundo {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+    text-align: center;
+  }
+
+  .logo a {
+    font-size: 30px;
+    text-decoration: none;
+    color: black;
+    margin-bottom: 15px;
+  }
+
+  .navbar {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .navbar a {
+    font-size: 16px;
+  }
+
+  .fundo img {
+    width: 100%;
+    height: auto;
+    margin-top: 20px;
+  }
+
+  /* ESCOLHA LOCAL */
+  .selecaoLocal {
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    align-items: center;
+  }
+
+  .selecaoLocal h2 {
+    font-size: 20px;
+  }
+
+  select, #botaoVer {
+    width: 100%;
+    max-width: 300px;
+    padding: 10px;
+    font-size: 16px;
+  }
+
+  /* LOCALIZAÇÃO */
+  #localizacao {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+  }
+
+  .map-container iframe {
+    width: 100%;
+    height: 300px;
+    border-radius: 10px;
+  }
+
+  .PortoDetalhe {
+    text-align: center;
+    margin-top: 20px;
+  }
+
+  .PortoDetalhe h2 {
+    font-size: 22px;
+  }
+
+  .PortoDetalhe p {
+    font-size: 16px;
+  }
+}

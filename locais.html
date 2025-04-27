@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="locais.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+  <link href="https://fonts.googleapis.com/css2?family=Josefin+Slab:ital,wght@0,100..700;1,100..700&display=swap"
+    rel="stylesheet">
+
+  <title>Document</title>
+</head>
+
+<body>
+
+  <header class="locaisHeader">
+    <div class="fundo">
+      <nav class="navbar">
+        <div class="logo">
+          <a href="index.html"><img src="images/lines-leaning-solid 1.svg" alt="logo"></a>
+        </div>
+        <a href="acomodacao.html">Acomodação</a>
+        <a href="locais.html">Locais</a>
+        <a href="index.html">Blog</a>
+        <a href="contactos.html">Contactos</a>
+      </nav>
+      <img src="images/pexels-alex-andrews-271121-1203808 2.png" alt="">
+    </div>
+  </header>
+
+  <section id="escolhaLocal">
+    <div class="selecaoLocal">
+      <h2>Escolha o país:</h2>
+
+      <select name="pais" id="pais">
+        <option value="">Selecione o país</option>
+        <option value="pt">Portugal</option>
+        <option value="br">Angola</option>
+        <option value="es">Espanha</option>
+      </select>
+
+      <select name="cidade" id="cidade">
+        <option value="">Selecione a cidade</option>
+        <option value="lisboa">Lisboa</option>
+        <option value="porto">Porto</option>
+        <option value="madrid">Coimbra</option>
+        <option value="sao-paulo">Braga</option>
+      </select>
+
+      <button id="botaoVer" type="button">Ver</button>
+    </div>
+
+    <div id="localizacao" class="hidden">
+      <div class="map-container">
+        <iframe
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d49813.49573732091!2d-8.645537711606933!3d41.16213795123881!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xd2465ec2f60ffb9%3A0x400ebbde49036c0!2sPorto!5e0!3m2!1spt-PT!2spt!4v1682777221571!5m2!1spt-PT!2spt"
+          allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade">
+        </iframe>
+      </div>
+
+      <div class="PortoDetalhe">
+        <h2>LIVING AROUND - Porto</h2>
+        <p>Rua da alegria, 466</p>
+        <p>4400-789 - Porto</p>
+
+        <p>livingaround_porto@living.com</p>
+
+      </div>
+    </div>
+
+
+  </section>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-k6d4wzSIapyDyv1kpU366/PK5hCdSbCRGRCMv+eplOQJWyd1fbcAu9OCUj5zNLiq"
+    crossorigin="anonymous"></script>
+
+  <script>
+    const paisSelect = document.getElementById('pais');
+    const cidadeSelect = document.getElementById('cidade');
+    const botaoVer = document.getElementById('botaoVer');
+    const localizacao = document.getElementById('localizacao');
+
+    botaoVer.addEventListener('click', function () {
+      if (paisSelect.value === 'pt' && cidadeSelect.value === 'porto') {
+        localizacao.classList.remove('hidden');
+      } else {
+        localizacao.classList.add('hidden');
+      }
+    });
+  </script>
+
+
+</body>
+
+
+</html>
